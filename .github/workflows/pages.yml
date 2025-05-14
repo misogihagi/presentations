@@ -1,0 +1,35 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: main
+          fetch-depth: 0
+
+      - uses: actions/checkout@v4
+        with:
+          ref: pages
+          path: pages
+
+      - name: Build
+        run: |
+          cd main
+          ./build.sh
+          entries=`find * -maxdepth 0 -type d`
+          for directory in $entries; do
+            cp -r $directory/* ../pages/$directory
+          done
+          commit_id=`git rev-parse HEAD`
+          cd ../pages
+          git add .
+          git commit -am "pages from $commit_id"
