@@ -22,6 +22,8 @@ jobs:
           path: pages
 
       - uses: pnpm/action-setup@v4
+        with:
+          version: 10
 
       - name: Build
         run: |
