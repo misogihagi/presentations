@@ -21,6 +21,8 @@ jobs:
           ref: pages
           path: pages
 
+      - uses: pnpm/action-setup@v4
+
       - name: Build
         run: |
           cd main
