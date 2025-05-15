@@ -35,7 +35,7 @@ jobs:
           for directory in $entries; do
             rm -rf ../pages/$directory
             mkdir -p ../pages/$directory
-            cp -r $directory/* ../pages/$directory
+            cp -r $directory/dist/* ../pages/$directory
           done
           commit_id=`git rev-parse HEAD`
           cd ../pages
