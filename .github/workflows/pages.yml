@@ -40,3 +40,4 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git add .
           git commit -am "pages from $commit_id"
+          git push
