@@ -31,6 +31,7 @@ jobs:
           ./build.sh
           entries=`find * -maxdepth 0 -type d`
           for directory in $entries; do
+            mkdir -p ../pages/$directory
             cp -r $directory/* ../pages/$directory
           done
           commit_id=`git rev-parse HEAD`
