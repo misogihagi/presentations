@@ -62,7 +62,7 @@ overviewSnapshots: true
 ## 実装してみた
 
 <video controls>
-  <source src="./sample.mp4" type="video/mp4">
+  <source src="/sample.mp4" type="video/mp4">
 </video>
 
 ---
