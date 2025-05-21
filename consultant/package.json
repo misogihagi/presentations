@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pptx": " @marp-team/marp-cli@latest --pptx-editable  --theme gradient.css slide.md",
+    "build": "mkdir -p dist && npx marp --html slide.md > dist/index.html",
+    "pptx": "@marp-team/marp-cli@latest --pptx-editable  --theme gradient.css slide.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@marp-team/marp-cli": "^4.1.2",
+    "@marp-team/marp-core": "^4.0.1"
+  }
 }
