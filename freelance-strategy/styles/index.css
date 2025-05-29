@@ -1,0 +1,37 @@
+        .image-container {
+            display: flex; /* Flexboxを有効にする */
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* 画面幅が狭い場合に折り返す */
+        }
+
+        .image-item {
+            flex: 1; /* 各アイテムが利用可能なスペースを均等に占める */
+            min-width: 200px; /* アイテムの最小幅 */
+            text-align: center;
+            position: relative;
+        }
+
+        .image-item img {
+            max-width: 100%; /* 画像が親要素からはみ出さないようにする */
+            height: auto; /* アスペクト比を維持 */
+            display: block; /* 画像の下にできる余白をなくす */
+            margin-bottom: 10px;
+        }
+
+        .image-item p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .left {
+            transform: scaleX(-1);
+        }
+
+        .letter {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
