@@ -1,0 +1,1 @@
+.container{display:flex;align-items:center;gap:20px}.text-content{flex:1}.image-wrapper{flex-shrink:0;width:80%}.image-wrapper img{width:100%;height:auto;display:block}@media (max-width: 768px){.container{flex-direction:column}.image-wrapper{width:100%}}
