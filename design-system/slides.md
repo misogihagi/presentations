@@ -29,6 +29,9 @@ mdc: true
 ## → デザインシステムを作ろう！
 
 ---
+layout: image-right
+image: /screen01.jpg
+---
 
 ## どこもかしこも8px
 
